@@ -58,7 +58,7 @@ A lightweight proxy that routes Claude Code's Anthropic API calls to **NVIDIA NI
 ```bash
 git clone https://github.com/Alishahryar1/free-claude-code.git
 cd free-claude-code
-cp .env.example .env
+Copy-Item .env.example .env
 ```
 
 Choose your provider and edit `.env`:
@@ -120,18 +120,18 @@ MODEL="nvidia_nim/z-ai/glm4.7"                      # fallback
 
 </details>
 
-### Run It
+### Run It (Inside the Project Root File)
 
 **Terminal 1:** Start the proxy server:
 
 ```bash
-uv run uvicorn server:app --host 0.0.0.0 --port 8082
+uv run fcc-server
 ```
 
 **Terminal 2:** Run Claude Code:
 
 ```bash
-ANTHROPIC_AUTH_TOKEN="freecc" ANTHROPIC_BASE_URL="http://localhost:8082" claude
+uv run fcc-claude
 ```
 
 That's it! Claude Code now uses your configured provider for free.
