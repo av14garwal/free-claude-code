@@ -134,7 +134,8 @@ uv run fcc-server
 uv run fcc-claude
 ```
 
-That's it! Claude Code now uses your configured provider for free.
+That's it! Claude Code now uses your configured provider for free. 
+For launching it from the next time, open the shorcuts folder then first double click the `start-proxy.bat` file, then the `start-claude.bat` file to simplify the process of launching claude again.
 
 <details>
 <summary><b>VSCode Extension Setup</b></summary>
